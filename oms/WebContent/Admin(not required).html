@@ -1,0 +1,339 @@
+
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Order Management System</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="css/mdb.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style_1.css">
+  <!-- Your custom styles (optional) -->
+  <link href="css/style.css" rel="stylesheet">
+       
+
+      </head>
+<body>
+<section>
+<section>
+
+<div class="modal fade" id="modalRegisterForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+            <h4 class="modal-title w-100 font-weight-bold">Modify</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+            <div class="md-form mb-5">
+                    <i class="fas fa-user-alt prefix grey-text"></i>
+                    <input type="text" id="orangeForm-name" class="form-control validate">
+                    <label data-error="wrong" data-success="right" for="orangeForm-name">Employee Id</label>
+                  </div>
+        <div class="md-form mb-5">
+          <i class="fas fa-user prefix grey-text"></i>
+          <input type="text" id="orangeForm-name" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="orangeForm-name">Name</label>
+        </div>
+        <div class="md-form mb-5">
+          <i class="fas fa-envelope-open prefix grey-text"></i>
+          <input type="email" id="orangeForm-email" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="orangeForm-email">E-mail</label>
+        </div>
+
+    	
+        <div class="md-form mb-4">
+          <i class="fas fa-lock prefix grey-text"></i>
+          <input type="password" id="orangeForm-pass" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="orangeForm-pass">Password</label>
+        </div>
+
+       
+
+  <div class="dropdown">
+        <button class="btn aqua-gradient dropdown-toggle mr-4" type="button" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">Select Designation</button>
+        <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Admin</a>
+                <a class="dropdown-item" href="#">Employee</a>
+                <a class="dropdown-item" href="#">Manager</a>
+                <a class="dropdown-item" href="#">Quality Control</a>
+              </div>
+      </div>
+ 
+  <div class="modal-footer">
+        <button type="button" class="btn aqua-gradient" data-dismiss="modal">Close</button>
+        <button type="button" class="btn aqua-gradient">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<!--Modal: modalConfirmDelete-->
+<div class="modal fade" id="modalConfirmDelete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-sm modal-notify modal-danger" role="document">
+    <!--Content-->
+    <div class="modal-content text-center" style="height:300px;">
+      <!--Header-->
+      <div class="modal-header d-flex justify-content-center">
+        <p class="heading">Are you sure?</p>
+      </div>
+
+      <!--Body-->
+      <div class="modal-body">
+
+        <i class="fas fa-times fa-4x animated rotateIn"></i>
+
+      </div>
+
+      <!--Footer-->
+      <div class="modal-footer flex-center">
+        <a href="" class="btn  btn-outline-danger">Yes</a>
+        <a type="button" class="btn  btn-danger waves-effect" data-dismiss="modal">No</a>
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+<!--Modal: modalConfirmDelete-->
+  
+  </section>
+<header>
+    <nav class="navbar navbar-light white">
+        <form class="form-inline">
+          <button class="btn purple-gradient btn-rounded" type="button" data-toggle="modal" data-target="#modalRegisterForm1">Add User</button>
+          <button class="btn btn-sm align-middle purple-gradient btn-rounded" type="button">LogOut</button>
+          <!-- Just an image -->
+
+
+
+    <a class="float-right nav-link" style="position:absolute;right:0px;">
+              <img src="img/logo.png" height="50">
+    </a>
+    <a class="nav-link" href="#" style="color:#0b0e0e;font-weight: bold;border-bottom:3px solid rgb(199, 20, 20); position:absolute;right:250px; ">HOME
+            &nbsp;<i class="fas fa-home"></i><span class="sr-only"></span></a>
+        </form>
+      </nav>
+      </header>
+    
+    
+      <table id="dtVerticalScrollExample" class="table table-striped table-bordered table-md container" cellspacing="0"
+      width="100%">
+
+        <thead>
+            <tr>
+                <th class="th-sm"><b><u>ID</u></b></th>
+                <th class="th-sm"><b><u>Name</u></b></th>
+                <th class="th-sm"><b><u>Designation</u></b></th>
+                <th class="th-sm"><b><u>Modify</u></b></th>
+                <th class="th-sm"><b><u>Delete</u></b></th>
+              </tr>
+      
+        </thead>
+      
+        <tbody>
+          <tr>
+                    
+            <td>1</td>
+            <td>Denver</td>
+            <td>Employee</td>
+            
+            <td>
+                <button type="button" class="btn btn-outline-primary btn-sm m-0 waves-effect" 
+                data-toggle="modal" data-target="#modalRegisterForm">Modify</button>
+              </td>
+              <td>
+                <button type="button" class="btn btn-outline-primary btn-sm m-0 waves-effect" 
+                data-toggle="modal" data-target="#modalConfirmDelete">Delete</button>
+              </td>
+          </tr>
+          <tr>
+                        
+            <td>1</td>
+            <td>Denver</td>
+            <td>Employee</td>
+            
+            <td>
+                <button type="button" class="btn btn-outline-primary btn-sm m-0 waves-effect"
+                data-toggle="modal" data-target="#modalRegisterForm">Modify</button>
+              </td>
+              <td>
+                <button type="button" class="btn btn-outline-primary btn-sm m-0 waves-effect"
+                 data-toggle="modal" data-target="#modalConfirmDelete">Delete</button>
+              </td>
+          </tr>         
+          <tr>
+                        
+            <td>1</td>
+            <td>Denver</td>
+            <td>Employee</td>
+            
+            <td>
+                <button type="button" class="btn btn-outline-primary btn-sm m-0 waves-effect"
+                data-toggle="modal" data-target="#modalRegisterForm">Modify</button>
+              </td>
+              <td>
+                <button type="button" class="btn btn-outline-primary btn-sm m-0 waves-effect" 
+                data-toggle="modal" data-target="#modalConfirmDelete">Delete</button>
+              </td>
+          </tr>
+          <tr>
+                        
+            <td>1</td>
+            <td>Denver</td>
+            <td>Employee</td>
+            
+            <td>
+                <button type="button" class="btn btn-outline-primary btn-sm m-0 waves-effect" 
+                data-toggle="modal" data-target="#modalRegisterForm">Modify</button>
+              </td>
+              <td>
+                <button type="button" class="btn btn-outline-primary btn-sm m-0 waves-effect" 
+                data-toggle="modal" data-target="#modalConfirmDelete">Delete</button>
+              </td>
+          </tr>
+          <tr>
+                        
+            <td>1</td>
+            <td>Denver</td>
+            <td>Employee</td>
+            
+            <td>
+                <button type="button" class="btn btn-outline-primary btn-sm m-0 waves-effect" 
+                data-toggle="modal" data-target="#modalRegisterForm" id="delete">Modify</button>
+              </td>
+              <td>
+                <button type="button" class="btn btn-outline-primary btn-sm m-0 waves-effect"
+                data-toggle="modal" data-target="#modalConfirmDelete" 
+                id="delete">Delete</button>
+              </td>
+              
+          </tr>
+        </tbody>
+      
+      </table>
+
+
+<!-- Modal add user -->
+
+<div class="modal fade" id="modalRegisterForm1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Add User</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+            <div class="md-form mb-5">
+                    <i class="fas fa-user-alt prefix grey-text"></i>
+                    <input type="text" id="orangeForm-name" class="form-control validate">
+                    <label data-error="wrong" data-success="right" for="orangeForm-name">Employee Id</label>
+                  </div>
+        <div class="md-form mb-5">
+          <i class="fas fa-user prefix grey-text"></i>
+          <input type="text" id="orangeForm-name" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="orangeForm-name">Name</label>
+        </div>
+        <div class="md-form mb-5">
+          <i class="fas fa-envelope-open prefix grey-text"></i>
+          <input type="email" id="orangeForm-email" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="orangeForm-email">E-mail</label>
+        </div>
+
+    	
+        <div class="md-form mb-4">
+          <i class="fas fa-lock prefix grey-text"></i>
+          <input type="password" id="orangeForm-pass" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="orangeForm-pass">Password</label>
+        </div>
+
+      
+
+  <div class="dropdown">
+        <button class="btn aqua-gradient dropdown-toggle mr-4" type="button" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">Select Designation</button>
+        <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Admin</a>
+                <a class="dropdown-item" href="#">Employee</a>
+                <a class="dropdown-item" href="#">Manager</a>
+                <a class="dropdown-item" href="#">Quality Control</a>
+              </div>
+      </div>
+ 
+  <div class="modal-footer">
+        <button type="button" class="btn aqua-gradient" data-dismiss="modal">Close</button>
+        <button type="button" class="btn aqua-gradient">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <! sign in!> -->
+
+
+
+
+
+
+
+<!-- Button trigger modal
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalConfirmDelete">Launch
+    modal</button> -->
+  
+  <!--Modal: modalConfirmDelete-->
+  
+  
+  <!--Modal: modalConfirmDelete-->
+
+
+<!-- Button trigger modal -->
+<p>dfdfdf</p>
+</body>
+
+
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="js/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="js/mdb.min.js"></script>
+
+
+
+<script>// Material Select Initialization
+      $(document).ready(function() {
+      $('.mdb-select').materialSelect();
+      });</script>
+     
+     <script>
+    $(document).ready(function () {
+      $('#dtDynamicVerticalScrollExample').DataTable({
+      "scrollY": "50vh",
+      "scrollCollapse": true,
+      });
+      $('.dataTables_length').addClass('bs-select');
+      });
+     
+</script>
+<script>
+     $('.dropdown-toggle').dropdown()
+</script>
+<script>
+
+
+</script>
+</html>
+
+

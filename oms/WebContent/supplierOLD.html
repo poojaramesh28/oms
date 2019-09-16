@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Order Management System</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="css/mdb.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style_1.css">
+  <!-- Your custom styles (optional) -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <style>
+    .navbar {
+       background: linear-gradient(40deg, rgba(0,51,199,.3), rgba(209,149,249,.3));
+    }
+    .navbar:not(.top-nav-collapse) {
+      background: transparent;
+    }
+.navbar .navbar-brand img {
+  height: 40px;
+  margin: 10px;
+}
+.hm-gradient {
+  background: linear-gradient(40deg, rgba(0,51,199,.3), rgba(209,149,249,.3));
+}
+.heading {
+  margin: 0 6rem;
+  font-weight: 700;
+  color: #5d4267;
+}
+.subheading {
+  margin: 2.5rem 6rem;
+  color: #bcb2c0;
+}
+.btn.btn-margin {
+  margin-left: 6rem;
+  margin-top: 3rem;
+}
+.btn.btn-lily {
+  background: linear-gradient(40deg, rgba(0,51,199,.7), rgba(209,149,249,.7));
+}
+.title {
+  margin-top: 6rem;
+  margin-bottom: 2rem;
+  color: #5d4267;
+}
+.subtitle {
+  color: #bcb2c0;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: 6rem;
+}
+
+body{
+   background:url(img/2.jpg);
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+    background-size: cover;
+    
+    
+}
+#oms{
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+             0px 8px 13px rgba(0,0,0,0.1),
+             0px 18px 23px rgba(0,0,0,0.1);
+             color:white;
+             
+}
+#back{
+  opacity: 1;
+    background:transparent;
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+}
+#ul li a:hover{
+    border-bottom:3px solid red;
+}
+#login{
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+
+}
+
+.card{
+  background: transparent !important;
+}
+
+#nav{
+  background-color: #757575 !important;
+}
+
+#btn{
+  background-color: #ea182b !important;
+
+}
+#btn:hover{
+  background-color: grey !important;
+  color:white;
+}
+input{
+  background: transparent !important;
+  color:black !important;
+}
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  /* The image used */
+  background-image: url("img/2.jpg");
+  
+  /* Add the blur effect */
+  filter: blur(.8px) !important;
+  -webkit-filter: blur(8px);
+  
+  /* Full height */
+  height: 100%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+
+/*div.background {
+  background: url(klematis.jpg) repeat;
+  border: 2px solid black;
+}*/
+
+div.transbox {
+  margin: 80px;
+  background-color: white;
+  border: 1px solid black;
+  opacity: 0.7;
+  filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+
+div.transbox p {
+  margin: 12%;
+  font-weight: bold;
+  color: #000000;
+}
+</style>
+</head>
+
+<body>
+
+  <!-- Image and text -->
+  <nav class="navbar navbar-dark" id="nav" style="background:black !important">
+      <img src="img/logo.png" height="80" class="d-inline-block align-top"
+        alt="mdb logo"> 
+        <button class="btn btn-outline-white btn-sm my-0" type="submit" style="height:40px; width: 110px;">Supplier Login</button>  
+  </nav>
+
+  <div class="row">
+    <div class="col-6" id="half">
+      <h1 class="animated bounce infinite" style="color:white; font-size:100px; font-family:Arial;">Render Quality and Trustable Goods</h1>
+    </div>
+    <div class="col-6 mx-auto" id="oms" style="margin-top:-30px;" >
+      <div class="background">
+        <div class="transbox">
+      <!-- Default form login -->
+          <form class="text-center border border-light p-5" action="SupplierLogin">
+
+            <p class="h4 mb-4">Sign in</p>
+            <!--<i class="fa fa-sign-in" aria-hidden="true"></i>-->
+
+             <!-- Email -->
+            <input type="text" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="User Name" style="border:1px solid black" name="supplier_name">
+
+            <!-- Password -->
+            <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password" style="border:1px solid black" name="supplier_password">
+
+           
+
+    <!-- Sign in button -->
+    <button class="btn btn-info btn-block my-4" type="submit" style="border:1px solid black; background-color: rgba(202, 3, 3, 0.966) !important;">Sign in   
+        <i class="fas fa-sign-in-alt" style="font-size:15px;"></i>
+      </button>
+    
+    
+
+    
+
+    
+
+</form>
+
+    </div>
+  </div>
+  </div>
+  </div>
+  
+  
+</body>
+
+
+
+
+
+  
+
+
+
+ 
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <script>// Material Select Initialization
+        $(document).ready(function() {
+        $('.mdb-select').materialSelect();
+        });
+  </script>
+        
+  <script>
+$('#half').addClass('animated bounceInLeft');
+$("#nav").addClass('animated fadeInDownBig');
+$("#oms").addClass('animated bounceInRight');
+    </script>
+
+</html>
